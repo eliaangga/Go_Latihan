@@ -14,9 +14,34 @@ type tabTag [99]tag
 func main() {
 	var h_tag tabTag
 	var tag int
-	tweetTag := tabTopic{"libur", "makan", "lebaran", "pricon", "hari_raya", "libur", "libur", "libur", "libur", "libur", "libur", "makan", "lebaran", "pricon", "libur", "makan", "libur", "makan", "lebaran", "pricon", "hari_raya", "lebaran", "pricon", "hari_raya"}
+	tweetTag := tabTopic{
+		"libur",
+		"makan",
+		"lebaran",
+		"pricon",
+		"hari_raya",
+		"libur",
+		"libur",
+		"libur",
+		"libur",
+		"libur",
+		"libur",
+		"makan",
+		"lebaran",
+		"pricon",
+		"libur",
+		"makan",
+		"libur",
+		"makan",
+		"lebaran",
+		"pricon",
+		"hari_raya",
+		"lebaran",
+		"pricon",
+		"hari_raya",
+	}
 	MengisiiTag(&h_tag, &tag, tweetTag, 22)
-	fmt.Println(MencariTrendingTopik(h_tag, tag))
+	fmt.Println("Topik Trending di Twitter yaitu:", MencariTrendingTopik(h_tag, tag))
 }
 
 func MencariTopik(T tabTag, topik string, n int) int {
